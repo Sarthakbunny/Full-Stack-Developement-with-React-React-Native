@@ -7,7 +7,7 @@ import { Control, LocalForm, Errors } from 'react-redux-form';
     const maxLength = (len)=>(val)=>!(val)||(val.length<=len);
     const minLength = (len)=>(val)=>(val) && (val.length>=len);
 
-    class CommentComponent extends Component{
+    class CommentForm extends Component{
         constructor(props){
             super(props);
             this.state = {
@@ -133,7 +133,7 @@ import { Control, LocalForm, Errors } from 'react-redux-form';
                 <div className="col-12 col-md-5 m-1">
                     <h3>Comments</h3>
                     {result.length > 0 ? result : null}
-                    <CommentComponent />
+                    <CommentForm />
                 </div>
             );
         }
